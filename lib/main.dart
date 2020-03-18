@@ -1,28 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:quickmeal/screens/catergories.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: MyHomePage(),
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      primarySwatch: Colors.deepPurple,
-    ),
-    title: 'QuickMeal',
-  ));
+  runApp(MyApp());
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('QuickMeal'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
       ),
+      title: 'QuickMeal',
+      home: CategoriesScreen(),
     );
   }
 }
