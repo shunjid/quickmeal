@@ -14,6 +14,6 @@ we will only see our favourite meals.
 
 # Different Stages
 
-Stages (1)             |  Stages (2)
-:-------------------------:|:-------------------------:
-![Stage 01](screenshots/Stage01.png)  |  ![Stage 02](screenshots/Stage02.png)
+Stages (1)             |  Stages (2)             | Stages (3)                   
+:-------------------------:|:-------------------------:|:-------------------------:
+![Stage 01](screenshots/Stage01.png)  |  ![Stage 02](screenshots/Stage02.png)  | ![Stage 03](screenshots/Stage03.png)
