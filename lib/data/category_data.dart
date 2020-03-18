@@ -6,7 +6,7 @@ const DummyCategories = const [
   Category(
     categoryId: 'c1',
     categoryTitle: 'Italian',
-    categoryColor: Colors.purple,
+    categoryColor: Colors.deepOrangeAccent,
   ),
   Category(
     categoryId: 'c2',

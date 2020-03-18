@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:quickmeal/screens/catergories.dart';
+import 'package:quickmeal/screens/catergoy_meals_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         accentColor: Colors.amber,
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        canvasColor: Colors.grey[900],
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
           body1: TextStyle(
@@ -32,6 +33,9 @@ class MyApp extends StatelessWidget {
       ),
       title: 'QuickMeal',
       home: CategoriesScreen(),
+      routes: {
+        '/categories': (ctx) => CategoryMealsScreen() ,
+      },
     );
   }
 }

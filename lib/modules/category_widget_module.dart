@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quickmeal/screens/catergoy_meals_screen.dart';
 
 // Single Category Item Builder
 class CategoryItem extends StatelessWidget {
@@ -7,14 +6,14 @@ class CategoryItem extends StatelessWidget {
   final String eachCategoryTitle;
   final Color eachCategoryColor;
 
-  CategoryItem({this.eachCategoryId, this.eachCategoryTitle, this.eachCategoryColor});
+  CategoryItem(
+      {this.eachCategoryId, this.eachCategoryTitle, this.eachCategoryColor});
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).push(MaterialPageRoute(
-      builder: (_) {
-        return CategoryMealsScreen();
-      },
-    ));
+    Navigator.of(ctx).pushNamed('/categories', arguments: {
+      'selectedCategoryId': eachCategoryId,
+      'selectedCategoryTitle': eachCategoryTitle,
+    });
   }
 
   @override
@@ -32,10 +31,10 @@ class CategoryItem extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              eachCategoryColor.withOpacity(0.7),
+              eachCategoryColor.withOpacity(0.9),
               eachCategoryColor,
             ],
-            begin: Alignment.topLeft,
+            begin: Alignment.bottomLeft,
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(15.0),
