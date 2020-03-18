@@ -12,3 +12,8 @@ When we press one of the categories, then a new screen will show meals of that s
 then we will have a new screen showing the details(image, ingredients, steps to create the dish) of that meals. In our settings, page we can take user choice of which type of meals they want to see (veg, non-veg) etc. In our favourite screen,
 we will only see our favourite meals.
 
+# Different Stages
+
+Stages (L)             |  Stages (R)
+:-------------------------:|:-------------------------:
+![Stage 01](screenshots/Stage01.png)  |  ![Stage 02](screenshots/Stage01.png)
