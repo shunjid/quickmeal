@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       title: 'QuickMeal',
-      home: CategoriesScreen(),
       routes: {
-        '/categories': (ctx) => CategoryMealsScreen() ,
+        '/' : (ctx) => CategoriesScreen(),
+        CategoryMealsScreen.routeName : (ctx) => CategoryMealsScreen() ,
       },
     );
   }

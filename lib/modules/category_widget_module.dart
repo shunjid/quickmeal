@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quickmeal/screens/catergoy_meals_screen.dart';
 
 // Single Category Item Builder
 class CategoryItem extends StatelessWidget {
@@ -6,11 +7,10 @@ class CategoryItem extends StatelessWidget {
   final String eachCategoryTitle;
   final Color eachCategoryColor;
 
-  CategoryItem(
-      {this.eachCategoryId, this.eachCategoryTitle, this.eachCategoryColor});
+  CategoryItem({this.eachCategoryId, this.eachCategoryTitle, this.eachCategoryColor});
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/categories', arguments: {
+    Navigator.of(ctx).pushNamed(CategoryMealsScreen.routeName, arguments: {
       'selectedCategoryId': eachCategoryId,
       'selectedCategoryTitle': eachCategoryTitle,
     });
