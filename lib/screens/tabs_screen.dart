@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quickmeal/modules/main_drawer.dart';
 import 'package:quickmeal/screens/catergories.dart';
 import 'package:quickmeal/screens/favourites_screen.dart';
 
@@ -50,6 +51,7 @@ class _TabScreenState extends State<TabScreen> {
           ),
         ],
       ),
+      drawer: MainDrawer(),
     );
   }
 }

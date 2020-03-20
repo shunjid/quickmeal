@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:quickmeal/screens/catergories.dart';
 import 'package:quickmeal/screens/catergoy_meals_screen.dart';
+import 'package:quickmeal/screens/filters_screen.dart';
 import 'package:quickmeal/screens/meal_details_screen.dart';
 import 'package:quickmeal/screens/tabs_screen.dart';
 
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         '/' : (ctx) => TabScreen(),
         CategoryMealsScreen.routeName : (ctx) => CategoryMealsScreen() ,
         MealDetailScreen.routeName : (ctx) => MealDetailScreen(),
+        FilterScreen.routeName : (ctx) => FilterScreen(),
       },
     );
   }
