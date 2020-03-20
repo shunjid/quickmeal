@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.pink,
         accentColor: Colors.amber,
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
