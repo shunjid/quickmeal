@@ -20,6 +20,6 @@ Stage (1)             |  Stage (2)             | Stage (3)            | Stage (4
 Stage (5)             |  Stage (6)             | Stage (7)            | Stage (8)                 |  
 | ![Stage 05](screenshots/Stage05.png)  | ![Stage 06](screenshots/Stage06.gif)  | ![Stage 07](screenshots/Stage07.gif)  | ![Stage 08](screenshots/Stage08.gif)  |
 Stage (9)             |  Stage (10)             | Stage (11)            | Stage (12)                 |
-| ![Stage 09](screenshots/Stage09.gif)  |
+| ![Stage 09](screenshots/Stage09.gif)  | ![Stage 10](screenshots/Stage10.gif)  |
 
 
