@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:quickmeal/data/meals_data.dart';
 import 'package:quickmeal/models/meal.dart';
 import 'package:quickmeal/modules/meal_widget_module.dart';
 
 class CategoryMealsScreen extends StatefulWidget {
   static const routeName = '/categoriesMealsScreen';
+
+  final List<Meal> availableMeals;
+  CategoryMealsScreen(this.availableMeals);
 
   @override
   _CategoryMealsScreenState createState() => _CategoryMealsScreenState();
@@ -29,7 +31,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
 
       final String selectedCategoryId = routeArgs['selectedCategoryId'];
       selectedCategoryTitle = routeArgs['selectedCategoryTitle'];
-      mealsOfSelectedCategory = DUMMY_MEALS.where((eachMeal) {
+      mealsOfSelectedCategory = widget.availableMeals.where((eachMeal) {
         return eachMeal.categories.contains(selectedCategoryId);
       }).toList();
 
