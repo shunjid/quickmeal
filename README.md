@@ -17,5 +17,5 @@ we will only see our favourite meals.
 Stage (1)             |  Stage (2)             | Stage (3)            | Stage (4)                   
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 | ![Stage 01](screenshots/Stage01.png)  |  ![Stage 02](screenshots/Stage02.png)  | ![Stage 03](screenshots/Stage03.png) | ![Stage 04](screenshots/Stage04.png) |
-| ![Stage 05](screenshots/Stage05.png)  | ![Stage 06](screenshots/Stage06.gif)  |
+| ![Stage 05](screenshots/Stage05.png)  | ![Stage 06](screenshots/Stage06.gif)  | ![Stage 07](screenshots/Stage07.gif)  |
 
