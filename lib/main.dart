@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:quickmeal/data/meals_data.dart';
 import 'package:quickmeal/models/meal.dart';
-import 'package:quickmeal/screens/catergories.dart';
 import 'package:quickmeal/screens/catergoy_meals_screen.dart';
 import 'package:quickmeal/screens/filters_screen.dart';
 import 'package:quickmeal/screens/meal_details_screen.dart';
@@ -24,8 +23,9 @@ class _MyAppState extends State<MyApp> {
     'vegan': false,
     'vegetarian': false,
   };
-
   List<Meal> _availableMeals = DUMMY_MEALS;
+
+  List<Meal> _favouriteMeals = [];
 
   void _setFilters(Map<String, bool> filterData) {
     setState(() {
@@ -46,6 +46,24 @@ class _MyAppState extends State<MyApp> {
         return true;
       }).toList();
     });
+  }
+
+  void _toggleFavourite(String mealId) {
+    final existingIndex = _favouriteMeals.indexWhere((meal) => meal.id == mealId);
+
+    if(existingIndex >= 0) {
+      setState(() {
+        _favouriteMeals.removeAt(existingIndex);
+      });
+    } else {
+      setState(() {
+        _favouriteMeals.add(DUMMY_MEALS.firstWhere((meal) => meal.id == mealId));
+      });
+    }
+  }
+
+  bool _isMealFavourite(String id) {
+    return _favouriteMeals.any((meal) => meal.id == id);
   }
 
   @override
@@ -72,10 +90,10 @@ class _MyAppState extends State<MyApp> {
       ),
       title: 'QuickMeal',
       routes: {
-        '/': (ctx) => TabScreen(),
+        '/': (ctx) => TabScreen(_favouriteMeals),
         CategoryMealsScreen.routeName: (ctx) =>
             CategoryMealsScreen(_availableMeals),
-        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(_toggleFavourite, _isMealFavourite),
         FilterScreen.routeName: (ctx) => FilterScreen(_setFilters, _filters),
       },
     );
